@@ -24,6 +24,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import java.security.Principal;
+
 @Controller
 @Slf4j
 @RequestMapping("/usuarios")
@@ -55,8 +57,8 @@ public class UsuariosSistemaController {
     }
 
     @RequestMapping("/meusdados")
-    public String meusDados(@AuthenticationPrincipal User user, Model model) {
-        Usuario usuario = usuarioRepository.findUsuarioByLogin(user.getUsername());
+    public String meusDados(Model model, Principal principal) {
+        Usuario usuario = usuarioRepository.findUsuarioByLogin(principal.getName());
         model.addAttribute("usuario", usuario);
         return cadastroUsuario(model);
     }
