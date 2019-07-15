@@ -7,7 +7,6 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import org.springframework.security.web.firewall.DefaultHttpFirewall;
 import org.springframework.security.web.firewall.HttpFirewall;
 import org.springframework.web.servlet.LocaleResolver;
@@ -16,16 +15,16 @@ import org.springframework.web.servlet.i18n.FixedLocaleResolver;
 import java.util.Locale;
 
 @SpringBootApplication
-public class ModuloControleApplication extends SpringBootServletInitializer {
+public class ApControleApplication extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
-        SpringApplication.run(ModuloControleApplication.class, args);
+        SpringApplication.run(ApControleApplication.class, args);
     }
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
         setRegisterErrorPageFilter(false);
-        return application.sources(ModuloControleApplication.class);
+        return application.sources(ApControleApplication.class);
     }
 
     @Bean

@@ -1,5 +1,6 @@
-package com.gitlab.andrepenteado.controle;
+package com.gitlab.andrepenteado.controle.security;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth2Sso;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.Environment;
@@ -7,20 +8,30 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.oauth2.client.token.grant.client.ClientCredentialsResourceDetails;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @EnableOAuth2Sso
 @EnableWebSecurity
-public class ModuloControleSecurity extends WebSecurityConfigurerAdapter {
+public class WebConfig extends WebSecurityConfigurerAdapter {
+
+    @Autowired
+    LogoutConfig logoutConfig;
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
             .antMatchers("/",
                 "/index.jsp",
+                "/assets/**",
+                "/dandelion-assets/**",
+                "/layouts/**",
+                "/webjars/**",
                 "/login**").permitAll()
             .anyRequest().authenticated()
         .and()
-            .logout();
+            .logout()/*
+                .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+                .logoutSuccessHandler(logoutConfig)*/;
     }
 
     @Bean
