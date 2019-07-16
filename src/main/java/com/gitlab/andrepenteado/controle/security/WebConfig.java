@@ -19,6 +19,7 @@ public class WebConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        // @formatter:off
         http.authorizeRequests()
             .antMatchers("/",
                 "/index.jsp",
@@ -26,12 +27,18 @@ public class WebConfig extends WebSecurityConfigurerAdapter {
                 "/dandelion-assets/**",
                 "/layouts/**",
                 "/webjars/**",
+                "/home",
+                "/erro",
+                "/acesso-negado",
                 "/login**").permitAll()
             .anyRequest().authenticated()
         .and()
-            .logout()/*
+            .exceptionHandling().accessDeniedPage("/acesso-negado")
+        .and()
+            .logout()
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                .logoutSuccessHandler(logoutConfig)*/;
+                .logoutSuccessHandler(logoutConfig);
+        // @formatter:on
     }
 
     @Bean

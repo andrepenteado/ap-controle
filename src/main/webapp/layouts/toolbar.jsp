@@ -6,12 +6,12 @@
 
 <dandelion:bundle includes="font-awesome"/>
 
-<sec:authorize access="isAuthenticated()">
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-      <i class="fas fa-user"></i>
-    </a>
-    <div class="dropdown-menu dropdown-menu-right">
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+    <i class="fas fa-user"></i>
+  </a>
+  <div class="dropdown-menu dropdown-menu-right">
+    <sec:authorize access="isAuthenticated()">
       <a class="dropdown-item">Usuário: <strong><sec:authentication property="name"/></strong></a>
       <a class="dropdown-item">Perfil: <strong><sec:authentication property="authorities"/></strong></a>
       <a class="dropdown-item">IP: <strong><sec:authentication property="details.remoteAddress"/></strong></a>
@@ -19,6 +19,9 @@
       <a class="dropdown-item" href="<c:url value="/usuarios/meusdados"/>"><i class="fas fa-user-edit"></i> Meus Dados</a>
       <div class="dropdown-divider"></div>
       <a class="dropdown-item" href="<c:url value="/logout"/>"><i class="fas fa-door-open"></i> Sair</a>
-    </div>
-  </li>
-</sec:authorize>
+    </sec:authorize>
+    <sec:authorize access="not isAuthenticated()">
+      <a class="dropdown-item" href="<c:url value="/home/secured"/>"><i class="fas fa-sign-in-alt"></i> Entrar</a>
+    </sec:authorize>
+  </div>
+</li>

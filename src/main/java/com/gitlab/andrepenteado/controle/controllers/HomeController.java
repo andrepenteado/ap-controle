@@ -14,6 +14,16 @@ public class HomeController implements ErrorController {
         return "home";
     }
 
+    @RequestMapping("/home/secured")
+    public String homeSecured() {
+        return "home";
+    }
+
+    @RequestMapping("/acesso-negado")
+    public String acessoNegado() {
+        return "acesso-negado";
+    }
+
     @RequestMapping("/erro")
     public String erro() {
         return "erro";
