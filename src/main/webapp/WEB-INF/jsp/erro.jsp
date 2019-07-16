@@ -33,7 +33,7 @@
     <h2>Erro no processamento</h2>
     <p>Sua requisição não foi processada corretamente pelo servidor</p>
     <br/>
-    <a href="<%=request.getContextPath()%>/" class="btn btn-primary"><i class="fa fa-home"></i> Página Inicial</a>
+    <a href="<%=request.getContextPath()%>/" class="btn btn-primary"><i class="fas fa-home"></i> Página Inicial</a>
   </div>
 </main> <!-- /container -->
 

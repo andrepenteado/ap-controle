@@ -55,7 +55,7 @@
       </dependency>
       <dependency>
          <groupId>com.gitlab.andrepenteado</groupId>
-         <artifactId>web-assets</artifactId>
+         <artifactId>ap-assets</artifactId>
          <version>2.2.0</version>
       </dependency>
       <dependency>
@@ -106,7 +106,7 @@
    </dependencies>
 
    <build>
-      <finalName>apcontrole</finalName>
+      <finalName>ap-controle</finalName>
       <plugins>
          <plugin>
             <groupId>org.springframework.boot</groupId>

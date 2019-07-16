@@ -1,8 +1,8 @@
-<%@page isErrorPage="true" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <html>
 <head>
-  <title>Erro no processamento</title>
+  <title>Acesso Negado</title>
   <link href="/sso/assets/css/web-assets.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/sso/webjars/font-awesome/5.7.2/css/all.min.css"></link>
   <link rel="stylesheet" href="/sso/webjars/bootstrap/4.3.1/css/bootstrap.min.css"></link>
@@ -13,7 +13,7 @@
 <div class="d-none d-sm-block">
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb fixed-top" style="margin-top: 56px">
-      <li class="breadcrumb-item active" aria-current="page">Erro no Processamento</li>
+      <li class="breadcrumb-item active" aria-current="page">Acesso Negado</li>
     </ol>
   </nav>
 </div>
@@ -30,18 +30,14 @@
   <div class="d-none d-sm-block" style="margin-top: 120px;"></div>
   <div class="text-center">
     <i class="fas fa-exclamation-triangle fa-4x"></i>
-    <h2>Erro no processamento</h2>
-    <p>Sua requisição não foi processada corretamente pelo servidor</p>
+    <h2>Acesso Negado</h2>
+    <p>Voc&ecirc; foi desconectado ou n&atilde;o tem privil&eacute;gios suficientes para completar a opera&ccedil;&atilde;o</p>
     <br/>
-    <a href="<%=request.getContextPath()%>/" class="btn btn-primary"><i class="fa fa-home"></i> Página Inicial</a>
+    <a href="<%=request.getContextPath()%>/" class="btn btn-primary"><i class="fas fa-lock"></i> Página Inicial</a>
   </div>
 </main> <!-- /container -->
 
 <br><br>
-
-<!--
-    <%if (exception != null) exception.printStackTrace(new java.io.PrintWriter(out));%>
--->
 
 <script src="/sso/webjars/popper.js/1.14.3/umd/popper.js"></script>
 <script src="/sso/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
