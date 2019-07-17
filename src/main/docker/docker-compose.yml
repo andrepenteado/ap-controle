@@ -1,20 +1,27 @@
 version: "3.7"
 services:
-  apcontrole-dbserver:
+  apcontrole-webapp:
+    image: registry.gitlab.com/andrepenteado/ap-controle
+    container_name: apcontrole-webapp-container
+    ports:
+      - "30001:8080"
+    extra_hosts:
+      - "host:127.0.0.1"
+    environment:
+      - "SPRING_PROFILES_ACTIVE=docker"
+  apsso-dbserver:
     image: postgres:11-alpine
-    container_name: apcontrole-dbserver-container
+    container_name: apsso-dbserver-container
     environment:
       POSTGRES_USER: apsso-dbuser
       POSTGRES_PASSWORD: apsso-dbpasswd
       POSTGRES_DB: apsso-dbname
     volumes:
       - apsso-pgdata:/var/lib/postgresql/data
-    expose:
-      - "50000:5432"
-  webapp:
-    image: registry.gitlab.com/andrepenteado/ap-apcontrole
-    container_name: apcontrole-webapp-container
+  apsso-webapp:
+    image: registry.gitlab.com/andrepenteado/ap-sso
+    container_name: apsso-webapp-container
     ports:
-      - "30001:8080"
+      - "30000:8080"
 volumes:
   apsso-pgdata:

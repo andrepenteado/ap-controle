@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://apsso-dbserver:5432/apsso-dbname?autoReconnect=true
+security:
+  oauth2:
+    client:
+      accessTokenUri: http://apsso-webapp:8080/ap-sso/oauth/token
+      clientId: com.gitlab.andrepenteado.apcontrole
+      clientSecret: apcontrole-secret
+      userAuthorizationUri: http://host:30000/ap-sso/oauth/authorize
+    resource:
+      userInfoUri: http://apsso-webapp:8080/ap-sso/user

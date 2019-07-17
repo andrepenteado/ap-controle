@@ -1,11 +1,11 @@
 spring:
   datasource:
-    url: jdbc:postgresql://apcontrole-dbserver:50000/apsso-dbname?autoReconnect=true
+    url: jdbc:postgresql://localhost:50000/apsso-dbname?autoReconnect=true
     username: apsso-dbuser
     password: apsso-dbpasswd
     driver-class-name: org.postgresql.Driver
     hikari:
-      pool-name: controle-pool
+      pool-name: apcontrole-pool
   jpa:
     show-sql: true
     open-in-view: false
