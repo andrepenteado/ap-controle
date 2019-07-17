@@ -1,6 +1,6 @@
-package com.gitlab.andrepenteado.controle.controllers;
+package com.gitlab.andrepenteado.apcontrole.controllers;
 
-import com.gitlab.andrepenteado.controle.entities.Usuario;
+import com.gitlab.andrepenteado.apcontrole.entities.Usuario;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

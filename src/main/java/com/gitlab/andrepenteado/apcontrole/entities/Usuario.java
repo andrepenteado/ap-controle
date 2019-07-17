@@ -1,6 +1,6 @@
-package com.gitlab.andrepenteado.controle.entities;
+package com.gitlab.andrepenteado.apcontrole.entities;
 
-import com.gitlab.andrepenteado.controle.entities.enums.Perfil;
+import com.gitlab.andrepenteado.apcontrole.entities.enums.Perfil;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;

@@ -1,16 +1,20 @@
 version: "3.7"
 services:
-  db-server:
+  apcontrole-dbserver:
     image: postgres:11-alpine
+    container_name: apcontrole-dbserver-container
     environment:
-      - "POSTGRES_USER=sso-user"
-      - "POSTGRES_PASSWORD=sso-passwd"
-      - "POSTGRES_DB=sso-db"
+      POSTGRES_USER: apsso-dbuser
+      POSTGRES_PASSWORD: apsso-dbpasswd
+      POSTGRES_DB: apsso-dbname
     volumes:
-      - sso-pgdata:/var/lib/postgresql/data
+      - apsso-pgdata:/var/lib/postgresql/data
+    expose:
+      - "50000:5432"
   webapp:
-    image: registry.gitlab.com/andrepenteado/ap-controle
+    image: registry.gitlab.com/andrepenteado/ap-apcontrole
+    container_name: apcontrole-webapp-container
     ports:
       - "30001:8080"
 volumes:
-  sso-pgdata:
+  apsso-pgdata:

@@ -1,11 +1,11 @@
-package com.gitlab.andrepenteado.controle.repositories;
+package com.gitlab.andrepenteado.apcontrole.repositories;
 
 /*
  * Autor: André Penteado
  * Data: 06/02/19 - 23:46
  */
 
-import com.gitlab.andrepenteado.controle.repositories.specs.UsuarioSpecification;
+import com.gitlab.andrepenteado.apcontrole.repositories.specs.UsuarioSpecification;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

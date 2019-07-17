@@ -1,8 +1,8 @@
-package com.gitlab.andrepenteado.controle.controllers;
+package com.gitlab.andrepenteado.apcontrole.controllers;
 
-import com.gitlab.andrepenteado.controle.entities.Usuario;
-import com.gitlab.andrepenteado.controle.entities.enums.Perfil;
-import com.gitlab.andrepenteado.controle.repositories.UsuarioRepository;
+import com.gitlab.andrepenteado.apcontrole.entities.Usuario;
+import com.gitlab.andrepenteado.apcontrole.entities.enums.Perfil;
+import com.gitlab.andrepenteado.apcontrole.repositories.UsuarioRepository;
 
 import javax.validation.Valid;
 
@@ -11,8 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Direction;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

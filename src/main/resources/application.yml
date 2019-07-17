@@ -1,0 +1,42 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://apcontrole-dbserver:50000/apsso-dbname?autoReconnect=true
+    username: apsso-dbuser
+    password: apsso-dbpasswd
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      pool-name: controle-pool
+  jpa:
+    show-sql: true
+    open-in-view: false
+    hibernate:
+      use-new-id-generator-mappings: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        temp:
+          use_jdbc_metadata_defaults: false
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+    favicon:
+      enabled: false
+  output:
+    ansi:
+      enabled: always
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration
+security:
+  oauth2:
+    client:
+      accessTokenUri: http://localhost:30000/ap-sso/oauth/token
+      clientId: com.gitlab.andrepenteado.apcontrole
+      clientSecret: apcontrole-secret
+      userAuthorizationUri: http://localhost:30000/ap-sso/oauth/authorize
+    resource:
+      userInfoUri: http://localhost:30000/ap-sso/user
+server:
+  error:
+    whitelabel:
+      enabled: false

@@ -3,10 +3,10 @@
 <html>
 <head>
   <title>Erro no processamento</title>
-  <link href="/sso/assets/css/web-assets.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/sso/webjars/font-awesome/5.7.2/css/all.min.css"></link>
-  <link rel="stylesheet" href="/sso/webjars/bootstrap/4.3.1/css/bootstrap.min.css"></link>
-  <script src="/sso/webjars/jquery/3.3.1-1/jquery.min.js"></script>
+  <link href="<%=request.getContextPath()%>/assets/css/web-assets.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/webjars/font-awesome/5.7.2/css/all.min.css"></link>
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/webjars/bootstrap/4.3.1/css/bootstrap.min.css"></link>
+  <script src="<%=request.getContextPath()%>/webjars/jquery/3.3.1-1/jquery.min.js"></script>
 <body>
 
 <!-- Invísivel em telas pequenas -->
@@ -43,8 +43,8 @@
     <%if (exception != null) exception.printStackTrace(new java.io.PrintWriter(out));%>
 -->
 
-<script src="/sso/webjars/popper.js/1.14.3/umd/popper.js"></script>
-<script src="/sso/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="<%=request.getContextPath()%>/webjars/popper.js/1.14.3/umd/popper.js"></script>
+<script src="<%=request.getContextPath()%>/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 </body>
 </html>

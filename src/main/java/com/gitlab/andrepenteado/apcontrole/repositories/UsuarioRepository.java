@@ -1,6 +1,6 @@
-package com.gitlab.andrepenteado.controle.repositories;
+package com.gitlab.andrepenteado.apcontrole.repositories;
 
-import com.gitlab.andrepenteado.controle.entities.Usuario;
+import com.gitlab.andrepenteado.apcontrole.entities.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 

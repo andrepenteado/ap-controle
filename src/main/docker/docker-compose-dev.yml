@@ -1,15 +1,19 @@
 version: "3.7"
 services:
-  db-server:
+  apcontrole-dbserver:
     image: postgres:11-alpine
+    container_name: apcontrole-dbserver-container
     environment:
-      - "POSTGRES_USER=sso-user"
-      - "POSTGRES_PASSWORD=sso-passwd"
-      - "POSTGRES_DB=sso-db"
+      POSTGRES_USER: apsso-dbuser
+      POSTGRES_PASSWORD: apsso-dbpasswd
+      POSTGRES_DB: apsso-dbname
     volumes:
-      - sso-pgdata:/var/lib/postgresql/data
-  webapp:
+      - apsso-pgdata:/var/lib/postgresql/data
+    expose:
+      - "50000:5432"
+  apcontrole-webapp:
     image: tomcat:9-jre11
+    container_name: apcontrole-webapp-container
     environment:
       - "JPDA_ADDRESS=*:8001"
       - "JPDA_TRANSPORT=dt_socket"
@@ -24,6 +28,6 @@ services:
       - "jpda"
       - "run"
     volumes:
-      - ../../../target/sso.war:/usr/local/tomcat/webapps/ap-controle.war
+      - ../../../target/sso.war:/usr/local/tomcat/webapps/ap-apcontrole.war
 volumes:
-  sso-pgdata:
+  apsso-pgdata:
