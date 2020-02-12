@@ -37,7 +37,7 @@ public class UsuariosSistemaController {
 
     @RequestMapping
     public String pesquisar(Model model) {
-        model.addAttribute("listagemUsuarios", usuarioRepository.findAll(new Sort(Direction.ASC, "nome")));
+        model.addAttribute("listagemUsuarios", usuarioRepository.findAll(Sort.by(Direction.ASC, "nome")));
         return "usuarios/pesquisar";
     }
 

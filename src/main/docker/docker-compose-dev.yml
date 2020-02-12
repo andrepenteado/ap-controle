@@ -4,10 +4,7 @@ services:
     image: tomcat:9-jre11
     container_name: apcontrole-webapp-container
     environment:
-      - "JPDA_ADDRESS=*:8001"
-      - "JPDA_TRANSPORT=dt_socket"
-      - "CATALINA_OPTS=-Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.rmi.port=1099 -Djava.rmi.server.hostname=0.0.0.0"
-      - "SPRING_PROFILES_ACTIVE=dev"
+      - "SPRING_PROFILES_ACTIVE=docker"
     ports:
       - "30001:8080"
       - "28001:8001"
@@ -17,4 +14,4 @@ services:
       - "jpda"
       - "run"
     volumes:
-      - ../../../target/sso.war:/usr/local/tomcat/webapps/ap-apcontrole.war
+      - ../../../target/ap-controle.war:/usr/local/tomcat/webapps/ap-controle.war

@@ -5,8 +5,6 @@ services:
     container_name: apcontrole-webapp-container
     ports:
       - "30001:8080"
-    extra_hosts:
-      - "host:127.0.0.1"
     environment:
       - "SPRING_PROFILES_ACTIVE=docker"
   apsso-dbserver:
@@ -25,5 +23,7 @@ services:
     container_name: apsso-webapp-container
     ports:
       - "30000:8080"
+    environment:
+      - "SPRING_PROFILES_ACTIVE=docker"
 volumes:
   apsso-pgdata:
