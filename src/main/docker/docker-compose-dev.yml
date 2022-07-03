@@ -1,14 +1,14 @@
 version: "3.7"
 services:
   apcontrole-webapp:
-    image: tomcat:9-jre11
+    image: tomcat:9-jre17
     container_name: apcontrole-webapp-container
     environment:
       - "SPRING_PROFILES_ACTIVE=docker"
     ports:
       - "30001:8080"
-      - "28001:8001"
-      - "21099:1099"
+      - "28002:8001"
+      - "21098:1099"
     entrypoint:
       - "catalina.sh"
       - "jpda"

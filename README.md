@@ -1,2 +1,2 @@
-# Portal de Sistemas
-Portal de single sign on para autenticação de sistemas
+# Módulo de Controle
+Cadastro de usuários e sistemas para acesso ao portal de sistemas central
