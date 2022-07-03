@@ -1,8 +1,4 @@
-package com.gitlab.andrepenteado.apcontrole.controllers;
-
-import com.gitlab.andrepenteado.apcontrole.entities.Usuario;
-import com.gitlab.andrepenteado.apcontrole.entities.enums.Perfil;
-import com.gitlab.andrepenteado.apcontrole.repositories.UsuarioRepository;
+package com.github.andrepenteado.apcontrole.controllers;
 
 import javax.validation.Valid;
 
@@ -21,6 +17,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import com.github.andrepenteado.apcontrole.entities.Usuario;
+import com.github.andrepenteado.apcontrole.entities.enums.Perfil;
+import com.github.andrepenteado.apcontrole.repositories.UsuarioRepository;
 
 import java.security.Principal;
 

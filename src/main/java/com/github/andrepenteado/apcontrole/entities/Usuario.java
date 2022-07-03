@@ -1,10 +1,11 @@
-package com.gitlab.andrepenteado.apcontrole.entities;
+package com.github.andrepenteado.apcontrole.entities;
 
-import com.gitlab.andrepenteado.apcontrole.entities.enums.Perfil;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 import org.springframework.format.annotation.DateTimeFormat;
+
+import com.github.andrepenteado.apcontrole.entities.enums.Perfil;
 
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;

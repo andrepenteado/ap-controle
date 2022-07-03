@@ -1,4 +1,4 @@
-package com.gitlab.andrepenteado.apcontrole.controllers;
+package com.github.andrepenteado.apcontrole.controllers;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.web.servlet.error.ErrorController;

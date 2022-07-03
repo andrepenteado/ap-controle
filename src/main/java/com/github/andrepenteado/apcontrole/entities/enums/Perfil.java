@@ -1,4 +1,4 @@
-package com.gitlab.andrepenteado.apcontrole.entities.enums;
+package com.github.andrepenteado.apcontrole.entities.enums;
 
 public enum Perfil {
 

@@ -1,4 +1,4 @@
-package com.gitlab.andrepenteado.apcontrole.security;
+package com.github.andrepenteado.apcontrole.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth2Sso;

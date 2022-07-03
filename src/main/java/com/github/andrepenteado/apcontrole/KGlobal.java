@@ -1,4 +1,4 @@
-package com.gitlab.andrepenteado.apcontrole;
+package com.github.andrepenteado.apcontrole;
 
 public class KGlobal {
 

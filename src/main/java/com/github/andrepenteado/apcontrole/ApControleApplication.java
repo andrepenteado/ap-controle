@@ -1,4 +1,4 @@
-package com.gitlab.andrepenteado.apcontrole;
+package com.github.andrepenteado.apcontrole;
 
 import ch.qos.logback.classic.helpers.MDCInsertingServletFilter;
 import org.springframework.boot.SpringApplication;

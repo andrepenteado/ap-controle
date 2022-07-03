@@ -1,12 +1,8 @@
-package com.gitlab.andrepenteado.apcontrole.repositories.specs;
+package com.github.andrepenteado.apcontrole.repositories.specs;
 
-/*
- * Autor: André Penteado
- * Data: 06/02/19 - 23:39
- */
-
-import com.gitlab.andrepenteado.apcontrole.entities.Usuario;
 import org.springframework.data.jpa.domain.Specification;
+
+import com.github.andrepenteado.apcontrole.entities.Usuario;
 
 public final class UsuarioSpecification {
 
