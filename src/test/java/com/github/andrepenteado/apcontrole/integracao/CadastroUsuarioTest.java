@@ -1,4 +1,4 @@
-package com.gitlab.andrepenteado.apcontrole.integracao;
+package com.github.andrepenteado.apcontrole.integracao;
 
 import org.junit.After;
 import org.junit.Before;

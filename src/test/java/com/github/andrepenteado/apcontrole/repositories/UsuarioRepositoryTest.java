@@ -1,4 +1,4 @@
-package com.gitlab.andrepenteado.apcontrole.repositories;
+package com.github.andrepenteado.apcontrole.repositories;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
